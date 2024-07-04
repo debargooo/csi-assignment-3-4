@@ -1,0 +1,40 @@
+.openmenu {
+  width: 350px;
+  height: 100vh;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  position: fixed;
+  left: 100rem;
+  top: 0;
+  transition: 0.3s ease; 
+  z-index: 10;
+}
+
+.openmenu.open {
+  right: 250px; 
+}
+
+.openmenu.closed {
+  transform: translateX(-100%);
+}
+
+.theme-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.theme-options {
+  margin-bottom: 2rem;
+}
+
+.theme-options h3 {
+  margin-bottom: 1.25rem;
+}
+
+#light,#dark {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}

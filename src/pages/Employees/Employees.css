@@ -1,0 +1,91 @@
+.employee-section-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #fff;
+    margin-top: 1.5rem;
+  }
+
+  .employee-section {
+    padding: 20px;
+  }
+  
+  .employee-grid {
+    display: grid;
+    gap: 10px;
+    margin-top: 1.5rem;
+  }
+  
+  .employee-grid-header, .employee-grid-row {
+    display: grid;
+    grid-template-columns: 50px 100px 1fr 2fr 1fr 100px;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  }
+  
+  .employee-grid-header {
+    font-weight: bold;
+    background-color: #f1f1f1;
+  }
+  
+  .employee-grid-row {
+    background-color: #f9f9f9;
+  }
+  
+  .employee-grid-row button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #ff4d4d;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .employee-grid-row button:hover {
+    background-color: #ff1a1a;
+  }
+  
+  .employee-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; 
+  }
+  
+  .pagination {
+    display: flex;
+    align-items: center;
+  }
+  
+  .pagination button {
+    margin: 0 10px; 
+  }
+  
+  .page-count {
+    margin: 0 10px; 
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+
+  .delete-btn {
+    background-color: #ff4d4d;
+  }
+
+ .delete-btn:hover {
+    background-color: rgb(255, 106, 106);
+    border: none;
+    color: white;
+ } 
+  

@@ -1,0 +1,105 @@
+.home-container {
+    background-color: whitesmoke;
+}
+
+
+
+.earnings-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+}
+
+.earnings-container img {
+    height: 10rem;
+}
+
+.earnings-container div p {
+    font-size: 1rem;
+}
+
+button {
+    color: white;
+    background-color: rgb(46, 164, 211);
+    border-radius: 10px;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s ;
+}
+
+button:hover {
+    background-color: white;
+    color: rgb(46, 164, 211);
+    border: 1px solid rgb(46, 164, 211);
+}
+
+.details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  
+}
+
+.details-container div img {
+    height: 4rem;
+}
+
+.details-container div div {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.details {
+    padding: 40px;
+    background-color: white;
+    box-shadow:  rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.stats-container img {
+    height: 20rem;
+}
+
+.earning {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.chart-container {
+    margin-top: 20px; 
+    width: 100%;
+    max-width: 1000px; 
+    height: 600px; 
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  
