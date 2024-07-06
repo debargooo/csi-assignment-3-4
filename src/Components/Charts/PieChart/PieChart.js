@@ -1,6 +1,6 @@
 import React, { PureComponent, useContext } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
-import { ThemeContext } from '../../../contexts/ThemeContext';
+
 
 const data = [
   { name: 'Product A', value: 400 },

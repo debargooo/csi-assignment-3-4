@@ -1,4 +1,4 @@
-import React, { useState,useContext } from 'react';
+import React, { useState} from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
@@ -8,7 +8,7 @@ const localizer = momentLocalizer(moment);
 
 
 const MyCalendar = () => {
-  const { theme } = useContext(ThemeContext);
+
   const [events, setEvents] = useState([
     {
       id: 1,
@@ -43,7 +43,7 @@ const MyCalendar = () => {
   };
 
   return (
-    <div style={{ height: '800px', marginTop: '2rem' ,background: theme.background, color: theme.color}}>
+    <div style={{ height: '800px', marginTop: '2rem' }}>
       <Calendar
         localizer={localizer}
         events={events}

@@ -22,7 +22,7 @@ export default function Navbar() {
     <div className="navbar-container" style={{ background: theme.background, color: theme.color }}>
       <navbar>
         <div>
-          <Link to="/" style={{color: theme.color }}>
+          <Link to="/" style={{ background: theme.background, color: theme.color }}>
            Home
           </Link>
           <div className="search-box">
@@ -35,6 +35,7 @@ export default function Navbar() {
               value={searchQuery}
               onChange={handleInputChange}
               className="input-search"
+              style={{color: theme.color }}
             ></input>
           </div>
         </div>
@@ -42,7 +43,7 @@ export default function Navbar() {
           <a>Cart</a>
           <a>Message</a>
           <a>Notifications</a>
-          <a  onClick={toggleThemeSidebar}>Settings</a>
+          <a onClick={toggleThemeSidebar}>Settings</a>
         </div>
       </navbar>
       {isThemeOpen && <ChangeTheme onClose={toggleThemeSidebar} />}

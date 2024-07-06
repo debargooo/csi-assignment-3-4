@@ -6,7 +6,6 @@
 
 .navbar-container {
     width: 100%;
-    background-color: #eee;
 }
 
 svg {
@@ -51,7 +50,7 @@ navbar div {
     transition: all .5s ease-in-out;
     background-color: white;
     padding-right: 40px;
-    color:black;
+    
   }
   .input-search::placeholder{
     color:rgba(255,255,255,.5);
