@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './Employees.css'; 
 import avatar from '../../data/avatar.jpg'; 
-import avatar2 from '../../data/avatar2.jpg'
-import avatar3 from '../../data/avatar3.png'
-import avatar4 from '../../data/avatar4.jpg'
+import avatar2 from '../../data/avatar2.jpg';
+import avatar3 from '../../data/avatar3.png';
+import avatar4 from '../../data/avatar4.jpg';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 const EmployeeSection = () => {
   const [employees, setEmployees] = useState([
@@ -11,18 +12,20 @@ const EmployeeSection = () => {
     { id: 2, name: 'Jane Smith', email: 'jane.smith@example.com', location: 'San Francisco', photo: avatar2 },
     { id: 3, name: 'Alice Johnson', email: 'alice.johnson@example.com', location: 'Chicago', photo: avatar3 },
     { id: 4, name: 'Michael Brown', email: 'michael.brown@example.com', location: 'Los Angeles', photo: avatar4 },
-    { id: 5, name: 'Emily Davis', email: 'emily.davis@example.com', location: 'Seattle', photo: avatar },
-    { id: 6, name: 'Daniel Wilson', email: 'daniel.wilson@example.com', location: 'Boston', photo: avatar2 },
-    { id: 7, name: 'Olivia Taylor', email: 'olivia.taylor@example.com', location: 'Miami', photo: avatar3 },
-    { id: 8, name: 'James Lee', email: 'james.lee@example.com', location: 'Houston', photo: avatar4 },
-    { id: 9, name: 'Sophia Moore', email: 'sophia.moore@example.com', location: 'Dallas', photo: avatar },
-    { id: 10, name: 'William Clark', email: 'william.clark@example.com', location: 'Austin', photo: avatar2 },
-    { id: 11, name: 'Ella Garcia', email: 'ella.garcia@example.com', location: 'Phoenix', photo: avatar3 },
-    { id: 12, name: 'Jacob Martinez', email: 'jacob.martinez@example.com', location: 'Denver', photo: avatar4 },
+    { id: 5, name: 'Emily Davis', email: 'emily.davis@example.com', location: 'Seattle', photo: avatar3 },
+    { id: 6, name: 'Daniel Wilson', email: 'daniel.wilson@example.com', location: 'Boston', photo: avatar4 },
+    { id: 7, name: 'Olivia Taylor', email: 'olivia.taylor@example.com', location: 'Miami', photo: avatar },
+    { id: 8, name: 'James Lee', email: 'james.lee@example.com', location: 'Houston', photo: avatar3 },
+    { id: 9, name: 'Sophia Moore', email: 'sophia.moore@example.com', location: 'Dallas', photo: avatar2 },
+    { id: 10, name: 'William Clark', email: 'william.clark@example.com', location: 'Austin', photo: avatar4 },
+    { id: 11, name: 'Ella Garcia', email: 'ella.garcia@example.com', location: 'Phoenix', photo: avatar },
+    { id: 12, name: 'Jacob Martinez', email: 'jacob.martinez@example.com', location: 'Denver', photo: avatar3 },
   ]);
 
+  const { theme } = useContext(ThemeContext);
+
   const [currentPage, setCurrentPage] = useState(1);
-  const employeesPerPage = 5; 
+  const employeesPerPage = 4; 
 
   const indexOfLastEmployee = currentPage * employeesPerPage;
   const indexOfFirstEmployee = indexOfLastEmployee - employeesPerPage;
@@ -64,11 +67,11 @@ const EmployeeSection = () => {
   };
 
   return (
-    <div className="employee-section-wrapper">
+    <div className="employee-section-wrapper" style={{ background: theme.background, color: theme.color }}>
       <div className="employee-section">
         <h2>Employee List</h2>
-        <div className="employee-grid">
-          <div className="employee-grid-header">
+        <div className="employee-grid" style={{ background: theme.background, color: theme.color }} >
+          <div className="employee-grid-header" >
             <div><input type="checkbox" onChange={toggleSelectAll} checked={selectedEmployees.length === currentEmployees.length && currentEmployees.length !== 0} /></div>
             <div>Photo</div>
             <div>Name</div>

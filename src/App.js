@@ -1,5 +1,5 @@
-import React from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
 import Sidebar from './Components/Sidebar/Sidebar';
 import Homepage from './pages/Homepage/Homepage';
@@ -11,9 +11,10 @@ import Line from './pages/Line/Line';
 import Area from './Components/Charts/AreaChart/AreaChart';
 import Bar from './pages/Bar/Bar';
 import Pie from './Components/Charts/PieChart/PieChart';
+import { ThemeContext } from './contexts/ThemeContext';
 import './App.css';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: (
@@ -95,12 +96,15 @@ function App() {
 }
 
 function AppLayout({ children }) {
+  
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <div className='app-container'>
-      <div className='sidebar-component'>
+    <div className='app-container' style={{ background: theme.background, color: theme.color }}>
+      <div className='sidebar-component' style={{ background: theme.background, color: theme.color }}>
         <Sidebar />
       </div>
-      <div className='navbar-component'>
+      <div className='navbar-component' style={{ background: theme.background, color: theme.color }}>
         <Navbar />
         {children}
       </div>

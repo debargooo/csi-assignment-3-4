@@ -1,7 +1,6 @@
 .app-container {
     display: flex;
     height: 100vh;
-    width: 100vw;
   }
   
   .sidebar-component {
@@ -10,20 +9,10 @@
   
   .navbar-component {
     width: 80%;
-    height: 100vh;
-    background-color: whitesmoke;
     display: flex;
     flex-direction: column;
   }
   
   .main-content > * {
     padding: 16px; 
-  }
-  
-  #light {
-    background-color: whitesmoke;
-  }
-
-  #dark {
-    background-color: black;
   }

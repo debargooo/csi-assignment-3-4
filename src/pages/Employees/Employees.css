@@ -4,7 +4,6 @@
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    background-color: #fff;
     margin-top: 1.5rem;
   }
 
@@ -23,17 +22,7 @@
     grid-template-columns: 50px 100px 1fr 2fr 1fr 100px;
     align-items: center;
     padding: 10px;
-    border-bottom: 1px solid #ccc;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-  }
-  
-  .employee-grid-header {
-    font-weight: bold;
-    background-color: #f1f1f1;
-  }
-  
-  .employee-grid-row {
-    background-color: #f9f9f9;
   }
   
   .employee-grid-row button {

@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 import Board from "./Board/Board";
 
@@ -14,6 +15,8 @@ function Kanban() {
     bid: "",
     cid: "",
   });
+
+  const { theme } = useContext(ThemeContext);
 
   const addboardHandler = (name) => {
     const tempBoards = [...boards];
@@ -121,7 +124,7 @@ function Kanban() {
   }, [boards]);
 
   return (
-    <div className="app">
+    <div className="app" style={{ background: theme.background, color: theme.color }}>
       <div className="app_nav">
         <h1>Kanban Board</h1>
       </div>

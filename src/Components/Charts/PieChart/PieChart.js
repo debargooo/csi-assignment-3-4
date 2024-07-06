@@ -1,5 +1,6 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, useContext } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
+import { ThemeContext } from '../../../contexts/ThemeContext';
 
 const data = [
   { name: 'Product A', value: 400 },
@@ -26,6 +27,7 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
 
 export default class Example extends PureComponent {
   static demoUrl = 'https://codesandbox.io/s/pie-chart-with-customized-label-dlhhj';
+;
 
   render() {
     return (

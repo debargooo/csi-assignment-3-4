@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './OrderPage.css'; 
 import orderImage1 from '../../data/product3.jpg';
 import orderImage2 from '../../data/product4.jpg';
 import orderImage3 from '../../data/product5.jpg';
 import orderImage4 from '../../data/product6.jpg';
 import orderImage5 from '../../data/product7.jpg';
-import orderImage6 from '../../data/product8.jpg';
+import { ThemeContext } from '../../contexts/ThemeContext';
+
 
 
 const OrderComponent = () => {
@@ -50,18 +51,12 @@ const OrderComponent = () => {
         totalAmount: '$90',
         status: 'Pending'
       },
-      {
-        id: 6,
-        image: orderImage6,
-        itemName: 'Product F',
-        customerName: 'Daniel Wilson',
-        totalAmount: '$110',
-        status: 'Completed'
-      }
+      
   ]);
+  const { theme } = useContext(ThemeContext);
 
   return (
-    <div className="order-section">
+    <div className="order-section" style={{ background: theme.background, color: theme.color }}>
       <h2>Order List</h2>
       <div className="order-grid">
         <div className="order-grid-header">

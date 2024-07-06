@@ -1,21 +1,31 @@
-import React, { createContext, useState } from 'react';
-import lightTheme from '../themes/lightTheme'
-import darkTheme from '../themes/darkTheme'
+import React, { createContext, useState, useEffect } from 'react';
+import lightTheme from '../themes/lightTheme';
+import darkTheme from '../themes/darkTheme';
 
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(darkTheme);
+  const [theme, setTheme] = useState(lightTheme);
 
-  const toggleTheme = () => {
-    setTheme((curr) => (curr === lightTheme ? darkTheme : lightTheme));
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) {
+      setTheme(JSON.parse(storedTheme));
+    } else {
+      // Default to light theme if no theme is stored
+      setTheme(lightTheme);
+      localStorage.setItem('theme', JSON.stringify(lightTheme));
+    }
+  }, []);
+
+  const updateTheme = (newTheme) => {
+    setTheme(newTheme);
+    localStorage.setItem('theme', JSON.stringify(newTheme));
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, updateTheme }}>
       {children}
     </ThemeContext.Provider>
   );
 };
-
-

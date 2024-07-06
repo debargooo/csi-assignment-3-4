@@ -5,7 +5,7 @@
   .custom-scroll::-webkit-scrollbar-thumb {
     border-radius: 50px;
     border: 1px solid #ccc;
-    background-color: #fff;
+    
   }
   
   .custom-scroll::-webkit-scrollbar-thumb:hover {
@@ -25,7 +25,7 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
-    background-color: #fff;
+
   }
   
   .app_boards_container {
@@ -50,15 +50,14 @@
   }
   
   .app_boards_add-board {
-    background-color: #fff;
-    color: #000;
+
+
     border-radius: 10px;
     box-shadow: 1px 1px 0 1px rgba(0, 0, 0, 0.12);
     width: 100%;
     text-align: center;
   }
   .app_boards_add-board_edit {
-    background-color: #fff;
     border-radius: 10px;
     padding: 10px;
   }

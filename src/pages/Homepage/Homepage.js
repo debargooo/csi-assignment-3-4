@@ -1,4 +1,4 @@
-import React  from "react";
+import React, { useContext } from "react";
 import "./Homepage.css";
 import customer from "../../data/customer.png";
 import product from "../../data/product.png";
@@ -7,12 +7,15 @@ import refund from "../../data/refund.png";
 import earning from "../../data/earning.png";
 import Example from "../../Components/Charts/LineChart/LineChart";
 import BarChart from "../../Components/Charts/BarChart/BarChart";
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 
 
 function Homepage() {
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <div className="home-container">
+    <div className="home-container" style={{ background: theme.background, color: theme.color }}>
       
       <div className="earnings-container">
         <div className="details-container">
