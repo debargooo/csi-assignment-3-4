@@ -12,7 +12,6 @@ export const ThemeProvider = ({ children }) => {
     if (storedTheme) {
       setTheme(JSON.parse(storedTheme));
     } else {
-      // Default to light theme if no theme is stored
       setTheme(lightTheme);
       localStorage.setItem('theme', JSON.stringify(lightTheme));
     }
