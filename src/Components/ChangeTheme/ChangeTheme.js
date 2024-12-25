@@ -1,17 +1,12 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import { CirclePicker } from 'react-color';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import './ChangeTheme.css';
 import darkTheme from '../../themes/darkTheme';
 import lightTheme from '../../themes/lightTheme';
 
-const ChangeTheme = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const ChangeTheme = ({ onClose }) => {
   const { theme, updateTheme } = useContext(ThemeContext);
-
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
 
   const handleThemeChange = (event) => {
     const selectedTheme = event.target.value === 'dark' ? darkTheme : lightTheme;
@@ -26,11 +21,11 @@ const ChangeTheme = () => {
   };
 
   return (
-    <div className={`openmenu ${isOpen ? 'open' : 'closed'}`} style={{ background: theme.background }}>
+    <div className={`openmenu closed`} style={{ background: theme.background }}>
       <div className='theme-div'>
         <h1 style={{ color: theme.color }}>Change Theme</h1>
         <svg 
-          onClick={toggleSidebar} 
+          onClick={onClose} // This will call the onClose prop to close the sidebar
           xmlns="http://www.w3.org/2000/svg" 
           viewBox="0 0 384 512"
           style={{ cursor: 'pointer', fill: theme.color }}

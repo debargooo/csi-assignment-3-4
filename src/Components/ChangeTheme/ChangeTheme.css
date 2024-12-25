@@ -5,18 +5,10 @@
   color: black;
   padding: 20px;
   position: fixed;
-  left: 100rem;
+  right: 0;
   top: 0;
   transition: 0.3s ease; 
   z-index: 10;
-}
-
-.openmenu.open {
-  right: 250px; 
-}
-
-.openmenu.closed {
-  transform: translateX(-100%);
 }
 
 .theme-div {
